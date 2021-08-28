@@ -1,0 +1,28 @@
+<div>
+    <h2><u>My Portfolio</u></h2>
+
+
+</div>
+<div>
+    Welcome {{currentUser}} <br>
+    <br>
+    <br>
+    Contact Name: <input type= "text" [(ngModel)] = "conName"><br>
+    Phone No.: <input type = "text" [(ngModel)] = "conNumber"><br>
+    <button (click) = "saveData()">Save</button>
+</div> 
+<div>
+    <label>Contact Details</label>
+    <table>
+        <thead>
+            <tr>
+            <th id = "thName">Name</th>
+            <th id = "thNumber">Number</th>
+            </tr>
+        </thead>
+        <tr *ngFor = "let p of userContacts">
+            <td>{{p[0]}}</td>
+            <td>{{p[1]}}</td>
+        </tr>
+    </table>
+</div>
